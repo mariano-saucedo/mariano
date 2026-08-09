@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Montserrat', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+
+  --color-canvas: #0A0A0B;
+  --color-card: #141416;
+  --color-card-border: #232326;
+  --color-card-hover: #1C1C1F;
+  --color-emerald-accent: #10B981;
+  --color-indigo-accent: #6366F1;
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Montserrat', sans-serif;
+  }
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.icon-fill {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Bento Card Hover Lift and Glow */
+.bento-card {
+  background-color: #141416;
+  border: 1px solid #232326;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card:hover {
+  border-color: #3f3f46;
+  box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Bento Accent Card */
+.bento-card-emerald {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+.bento-card-indigo {
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+  color: #FFFFFF;
+}
+
+/* Dark Input Styling */
+.bento-input {
+  background-color: #1C1C1F;
+  border: 1px solid #232326;
+  color: #FFFFFF;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.bento-input:focus {
+  border-color: #6366F1;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+
